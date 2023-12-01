@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Shop</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="" class="logo">Fruits<span>.</span></a>
+            <ul class="menu">
+                <span id="close-btn" class="material-symbols-outlined">Close</span>
+                <li><a href="">Home</a></li>
+                <li><a href="">Fruits</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <span id="menu-btn" class="material-symbols-outlined">Menu</span>
+        </nav>
+    </header>
+
+    <section class="title-section">
+        <div class="content">
+            <h1>Fresh, Juicy, and Bursting with Tropical Goodness</h1>
+            <p>Embark on a flavor-filled adventure with locally sourced fruit, a tribute to the richness of our hometown. 
+            Savor the essence of local goodness as you bite into the juicy, sun-ripened fruit that makes our orchard special. 
+            Join us in celebrating the authentic taste of home, where every piece tells a story of our local land and
+            the delicious treasures it produces</p>
+
+            <button> Order Now</button>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeBtn = document.querySelector("#close-btn");
+
+        //toggle mobile menu
+        menuBtn.addEventListener("click",() => {
+            header.classList.toggle("show-mobile-menu");
+        })
+
+        //close mobile menu
+        closeBtn.addEventListener("click",() => {
+            menuBtn.click();
+        })
+    </script>
+    
+</body>
+</html>

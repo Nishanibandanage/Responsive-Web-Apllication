@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1591287083773-9a52ba8184a4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(19, 78, 42);
+    font-size: 20px;
+}
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .logo{
+    color: #fff;
+
+    font-size: 2.1rem;
+    font-weight: 600;
+    
+}
+
+.navbar .logo span{
+    color: #fff;
+}
+
+.navbar .menu{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: goldenrod;
+}
+
+.title-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title-section .content{
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.title-section .content h1{
+    font-size: 2rem;
+    
+}
+
+.title-section .content p{
+    font-weight: 300;
+    margin-top: 15px;
+    
+}
+
+.title-section .content button{
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.title-section .content button:hover{
+    color: #fff;
+    background: goldenrod;
+}
+
+#menu-btn{
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+#close-btn{
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        padding: 10px 20px;
+    }
+
+    header.show-mobile-menu::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(1px);
+    }
+
+
+    #menu-btn, #close-btn{
+        display: block;
+        color: #fff;
+    }
+
+    .navbar a:hover{
+        Width: 100%;
+        color:goldenrod;
+    }
+    
+
+    .navbar .menu{
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+        transition: left 0.15s;
+        background: rgb(19, 78, 42);
+    }
+
+    header.show-mobile-menu .navbar .menu{
+        left: 0;
+    }
+    
+    .navbar a{
+        color: #fff;
+    }
+
+    .title-section .content{
+        text-align: center;
+    }
+
+    .title-section .content :is(h1,p){
+        max-width: 100%;
+    }
+
+    .title-section .content h1{
+        font-size: 2.3rem;
+        line-height: 60px;
+    }
+
+    .title-section .content button{
+        padding: 9px 18px;
+    }
+}
